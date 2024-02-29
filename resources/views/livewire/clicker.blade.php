@@ -1,11 +1,15 @@
 <div>
-    <h2>{{ $username }}</h2>
+    <form wire:submit="createNewUser">
+        <input wire:model="name" type="text" placeholder="text" />
+        <input wire:model="email" type="email" placeholder="email" />
+        <input wire:model="password" type="password" placeholder="password" />
 
-    <h1> {{ $title }} </h1>
+        <button> Create </button>
+    </form>
 
-    {{ count($users) }}
+    <hr />
 
-    <button wire:click="createNewUser">
-        Create New User
-    </button>
+    @foreach ($users as $user)
+        <h3>{{ $user->name }}</h3>
+    @endforeach
 </div>
