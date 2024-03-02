@@ -1,4 +1,8 @@
 <div>
+    @if (session()->has('success'))
+        <span class="py-3 px-3 bg-green-600 text-white rounded">{{ session()->get('success') }}</span>
+    @endif
+
     <form class="p-5" wire:submit="createNewUser">
         <input class="block rounded border border-gray-100 px-3 py-1 mt-1" wire:model="name" type="text"
             placeholder="text" />
@@ -24,7 +28,7 @@
             </span>
         @enderror
 
-        <button class="block rounded px-3 py-1 bg-gray-400 text-white"> Create </button>
+        <button class="block rounded px-3 py-1 bg-gray-400 text-white mt-1"> Create </button>
     </form>
 
     <hr />
