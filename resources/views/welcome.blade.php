@@ -15,6 +15,6 @@
     <body class="antialiased">
         {{-- @livewire("clicker") --}}
 
-        {{-- @livewire('register-form') --}}
+        @livewire('register-form')
     </body>
 </html>
