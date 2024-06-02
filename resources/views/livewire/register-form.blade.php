@@ -114,6 +114,10 @@
             <span class="sr-only">Loading...</span>
         </div>
 
+        {{-- reload button (wire:click.prevent="reloadList") (@click="dispatch('user-created')") -> alpinejs --}}
+        <button wire:click.prevent="reloadList" type="button"
+            class="rounded-full text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium text-sm px-5 py-2.5 text-center me-2 mb-2">Reload</button>
+
         {{-- submit button --}}
         <button wire:loading.class="bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br"
             wire:loading.attr="disabled" type="submit"

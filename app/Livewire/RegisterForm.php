@@ -31,13 +31,18 @@ class RegisterForm extends Component
             $validated['image'] = $this->image->store('uploads', 'public');
         }
 
-        User::create($validated);
+        $user = User::create($validated);
 
         $this->reset('name', 'email', 'password', 'image');
 
-        sessioN()->flash('success', 'User Created!');
-    }
+        session()->flash('success', 'User Created!');
 
+        $this->dispatch('user-created', $user);
+    }
+    public function reloadList()
+    {
+        $this->dispatch('user-created');
+    }
     public function render()
     {
         return view('livewire.register-form');
