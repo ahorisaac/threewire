@@ -17,8 +17,14 @@ class UsersList extends Component
         dd($user);
     }
 
+    public function placeholder()
+    {
+        return view('placeholder');
+    }
+
     public function render()
     {
+        sleep(3);
         return view('livewire.users-list', [
             'users' => User::latest()->paginate(3)
         ]);

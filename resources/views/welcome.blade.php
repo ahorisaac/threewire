@@ -17,7 +17,7 @@
 <body class="antialiased">
     <div class="flex">
         <div class="w-1/2">
-            @livewire('users-list')
+            @livewire('users-list', ['lazy' => true])
         </div>
         <div class="w-1/2">
             @livewire('register-form')
