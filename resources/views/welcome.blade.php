@@ -16,11 +16,15 @@
 
 <body class="antialiased">
     <div class="flex">
-        <div class="w-1/2">
+        {{-- <div class="w-1/2">
             @livewire('users-list', ['lazy' => true])
         </div>
         <div class="w-1/2">
             @livewire('register-form')
+        </div> --}}
+
+        <div class="">
+            @livewire('contact-us')
         </div>
     </div>
 </body>
