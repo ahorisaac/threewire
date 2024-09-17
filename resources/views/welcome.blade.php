@@ -23,9 +23,11 @@
             @livewire('register-form')
         </div> --}}
 
-        <div class="mx-auto">
+        {{-- <div class="mx-auto">
             @livewire('contact-us')
-        </div>
+        </div> --}}
+
+        @livewire("users-table")
     </div>
 </body>
 
