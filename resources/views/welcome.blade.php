@@ -23,7 +23,7 @@
             @livewire('register-form')
         </div> --}}
 
-        <div class="">
+        <div class="mx-auto">
             @livewire('contact-us')
         </div>
     </div>
