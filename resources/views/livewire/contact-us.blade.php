@@ -1,6 +1,6 @@
 <div class="p-4">
     @if(Session::has("success"))
-        <div class="flex max-w-lg my-5 mx-auto items-center p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
+        <div class="flex max-w-lg my-5 mx-auto items-center p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50"
             role="alert">
             <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor" viewBox="0 0 20 20">
@@ -25,10 +25,10 @@
     <form wire:submit="submitForm" class="max-w-lg mx-auto">
         {{-- email --}}
         <div class="mb-5">
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your
                 email</label>
             <input wire:model="form.email" type="email" id="email"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder="name@example.com" />
             @error('form.email')
                 <span class="text-red-500 text-xs">{{ $message }}</span>
@@ -37,10 +37,10 @@
 
         {{-- subject --}}
         <div class="mb-5">
-            <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            <label for="subject" class="block mb-2 text-sm font-medium text-gray-900">
                 Subject</label>
             <input wire:model="form.subject" type="text" id="subject"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" />
             @error('form.subject')
                 <span class="text-red-500 text-xs">{{ $message }}</span>
             @enderror
@@ -48,10 +48,10 @@
 
         {{-- message body --}}
         <div class="mb-5">
-            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+            <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Your
                 message</label>
             <textarea wire:model="form.message" id="message" rows="4"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Leave a comment..."></textarea>
             @error('form.message')
                 <span class="text-red-500 text-xs">{{ $message }}</span>
@@ -60,6 +60,6 @@
 
         {{-- submit button --}}
         <button type="submit"
-            class="shadow-xl text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Submit</button>
+            class="shadow-xl text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none">Submit</button>
     </form>
 </div>
